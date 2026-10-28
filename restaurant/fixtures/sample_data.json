@@ -1,0 +1,60 @@
+[
+  {
+    "model": "restaurant.menuitem",
+    "pk": 1,
+    "fields": {
+      "title": "Greek Salad",
+      "price": "12.99",
+      "inventory": 25
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 2,
+    "fields": {
+      "title": "Bruschetta",
+      "price": "7.99",
+      "inventory": 40
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 3,
+    "fields": {
+      "title": "Lemon Dessert",
+      "price": "8.50",
+      "inventory": 15
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 4,
+    "fields": {
+      "title": "Grilled Fish",
+      "price": "19.95",
+      "inventory": 20
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 5,
+    "fields": {
+      "title": "Pasta Alfredo",
+      "price": "14.50",
+      "inventory": 30
+    }
+  },
+  {
+    "model": "restaurant.booking",
+    "pk": 1,
+    "fields": {
+      "name": "Coursera Reviewer",
+      "no_of_guests": 2,
+      "booking_date": "2026-11-01",
+      "booking_time": "19:00:00",
+      "table_number": 1,
+      "booking_reference": "LL-20261101-PEER01",
+      "created_at": "2026-10-28T16:00:00Z"
+    }
+  }
+]

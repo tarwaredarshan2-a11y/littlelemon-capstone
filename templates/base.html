@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Little Lemon Restaurant{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Markazi+Text:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="{% url 'index' %}" class="logo-brand">
+                <span class="logo-lemon"></span>
+                <span class="logo-text">LITTLE LEMON</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'menu-page' %}">Menu</a></li>
+                    <li><a href="{% url 'book-page' %}">Book a Table</a></li>
+                    <li><a href="{% url 'menu-list' %}" target="_blank">Menu API</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Little Lemon Restaurant &middot; Coursera Back-End Developer Capstone Project</p>
+    </footer>
+</body>
+</html>

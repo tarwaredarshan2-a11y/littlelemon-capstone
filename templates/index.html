@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | Little Lemon Restaurant{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-text">
+            <h1>Little Lemon</h1>
+            <h2>Chicago</h2>
+            <p>
+                We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. 
+                Enjoy our fresh seasonal ingredients, artisanal recipes, and welcoming atmosphere.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="{% url 'book-page' %}" class="btn btn-primary">Reserve a Table</a>
+                <a href="{% url 'menu-page' %}" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="section-title">
+        <h2>Specialties & Features</h2>
+        <p>Crafted fresh every single day</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Authentic Recipes</h3>
+            <p>Traditional Mediterranean culinary traditions preserved with love, passion, and decades of family culinary heritage.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Table Reservations</h3>
+            <p>Reserve your dining experience online easily through our REST API or modern reservation portal.</p>
+        </div>
+        <div class="feature-card">
+            <h3>RESTful API Ready</h3>
+            <p>Fully compliant with Coursera Capstone API specifications, token authentication, and MySQL backend.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

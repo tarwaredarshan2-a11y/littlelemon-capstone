@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu | Little Lemon Restaurant{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="section-title">
+        <h2>Our Menu</h2>
+        <p>Fresh Mediterranean dishes cooked to perfection</p>
+    </div>
+
+    {% if menu_items %}
+    <div class="menu-grid">
+        {% for item in menu_items %}
+        <div class="menu-card">
+            <div class="menu-card-info">
+                <h3>{{ item.title }}</h3>
+                <span class="stock">Inventory: {{ item.inventory }} in stock</span>
+            </div>
+            <div class="menu-card-price">
+                ${{ item.price }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div style="text-align: center; padding: 3rem; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h3>No menu items available yet.</h3>
+        <p style="margin-top: 0.5rem; color: #666;">
+            Add menu items via the <a href="{% url 'menu-list' %}">Menu API (POST /restaurant/menu/)</a> or the Django Admin panel.
+        </p>
+    </div>
+    {% endif %}
+
+    <div style="margin-top: 3rem; text-align: center;">
+        <a href="{% url 'book-page' %}" class="btn btn-primary">Book a Table Now</a>
+    </div>
+</div>
+{% endblock %}
